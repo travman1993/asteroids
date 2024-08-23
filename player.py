@@ -1,7 +1,7 @@
 import pygame
 from circleshape import *
 
-class Player(CircleShape)
+class Player(CircleShape):
     def __init__(self, x, y):
         super().__init__()
         self.position = pygame.Vector2(x, y)
