@@ -23,6 +23,8 @@ def main():
                 pygame.quit()
                 return 
         screen.fill((0, 0, 0))
+        player.update(dt)
+        player.move(dt)
         # call player to loop
         player.draw(screen)
         pygame.display.flip()
