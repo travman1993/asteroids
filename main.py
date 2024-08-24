@@ -16,11 +16,11 @@ def main():
     # dt variable
     dt = 0
     # main game loop
-    running = True
-    while running:
+    
+    while True: 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False
+                return False
         screen.fill((0, 0, 0))
         # call player to loop
         player.draw(screen)
