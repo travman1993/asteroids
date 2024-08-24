@@ -20,13 +20,14 @@ def main():
     while True: 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                return False
+                pygame.quit()
+                return 
         screen.fill((0, 0, 0))
         # call player to loop
         player.draw(screen)
         pygame.display.flip()
         # FPS to 60
-        return dt == clock.tick(60) / 1000
+        dt = clock.tick(60) / 1000
 
 if __name__ == "__main__":
     main()
